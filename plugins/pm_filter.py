@@ -883,14 +883,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('💯 𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 & كيفية الاستخدام 💯', callback_data='how')
-        ], [
-            InlineKeyboardButton('🔍 𝚂𝙴𝙰𝚁𝙲𝙷', url='https://t.me/ArrowFlix'),
-            InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/TorrentSeriess')
-        ], [
-            InlineKeyboardButton('💠 𝙷𝙴𝙻𝙿', callback_data='help'),
-            InlineKeyboardButton('🌐 𝙰𝙱𝙾𝚄𝚃', callback_data='about')
-        ]]
+                    InlineKeyboardButton('➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕', url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+                ],[
+                    InlineKeyboardButton('🛡 𝖮𝗐𝗇𝖾𝗋', callback_data="owner_info"),
+                    InlineKeyboardButton('🧩 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉', url=f"https://t.me/{SUPPORT_CHAT}")
+                ],[
+                    InlineKeyboardButton('ℹ️ 𝖧𝖾𝗅𝗉', callback_data='help'),
+                    InlineKeyboardButton('😊 𝖠𝖻𝗈𝗎𝗍', callback_data='about'),
+                ],[
+                    InlineKeyboardButton('🔎 𝖨𝗇𝗅𝗂𝗇𝖾 𝖲𝖾𝖺𝗋𝖼𝗁', switch_inline_query_current_chat='')
+                  ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
@@ -965,7 +967,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-
     elif query.data == "about":
         buttons = [[
             InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉', url=f"https://t.me/{SUPPORT_CHAT}"),
